@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Homepage</title>
-  </head>
-  <body>
-    <h1>Music Homepage</h1>
+<h1>Music Artist Homepage</h1>
 
-    <nav>
-      <a href="/posts/new">new</a>
-      <a href="/posts/:id>">Show</a>
-    </nav>
-
-  </body>
-</html>
+<% @posts.each do |post| %>
+<div class="">
+  <a href="/posts/<%= post[:id] %>"><%= post[:id] %></a>
+</div>
+<% end %>

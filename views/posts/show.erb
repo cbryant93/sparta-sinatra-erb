@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Showpage</title>
-  </head>
-  <body>
-    <h1>This shows the page</h1>
-     <nav>
-       <a href="/post">Home</a>
-     </nav>
-  </body>
-</html>
+
+<% @posts.each do |post| %>
+<div class="">
+  <h1>Information about <%= @post[:id] %></h1>
+
+  <p><%= @post[:body] %></p>
+
+  <a href="/posts/<%= @post[:id] %>/edit">Edit</a>
+</div>
+<% end %>
