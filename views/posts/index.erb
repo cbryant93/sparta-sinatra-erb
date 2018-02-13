@@ -1,0 +1,7 @@
+<h1>Music Artist Homepage</h1>
+
+<% @posts.each do |post| %>
+<div class="">
+  <a href="/posts/<%= post[:id] %>"><%= post[:title] %></a>
+</div>
+<% end %>
